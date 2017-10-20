@@ -1,0 +1,81 @@
+{
+    "name": "espressif32",
+    "title": "Espressif 32",
+    "description": "Espressif Systems is a privately held fabless semiconductor company. They provide wireless communications and Wi-Fi chips which are widely used in mobile devices and the Internet of Things applications.",
+    "url": "https://espressif.com/",
+    "homepage": "http://platformio.org/platforms/espressif32",
+    "license": "Apache-2.0",
+    "engines": {
+        "platformio": "^3.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/platformio/platform-espressif32.git"
+    },
+    "version": "1.0.4",
+    "packageRepositories": [
+        "http://dl.intoyun.com/intoyuniot/packages/manifest.json"
+    ],
+    "frameworks": {
+        "arduino": {
+            "package": "framework-arduinoespressif32",
+            "script": "builder/frameworks/arduino.py"
+        },
+        "espidf": {
+            "package": "framework-espidf",
+            "script": "builder/frameworks/espidf.py"
+        },
+        "simba": {
+            "package": "framework-simba",
+            "script": "builder/frameworks/simba.py"
+        },
+        "pumbaa": {
+            "package": "framework-pumbaa",
+            "script": "builder/frameworks/pumbaa.py"
+        },
+        "intorobot": {
+            "package": "framework-intorobotespressif32",
+            "script": "builder/frameworks/intorobot.py"
+        }
+    },
+    "packages": {
+        "toolchain-xtensa32": {
+            "type": "toolchain",
+            "version": "~1.50200.0"
+        },
+        "framework-arduinoespressif32": {
+            "type": "framework",
+            "optional": true,
+            "version": "~1.1.4"
+        },
+        "framework-espidf": {
+            "type": "framework",
+            "optional": true,
+            "version": "~2.200.0"
+        },
+        "framework-simba": {
+            "type": "framework",
+            "optional": true,
+            "version": ">=12.2.0"
+        },
+        "framework-pumbaa": {
+            "type": "framework",
+            "optional": true,
+            "version": ">=2.3.0"
+        },
+        "framework-intorobotespressif32": {
+            "type": "framework",
+            "optional": true,
+            "version": "~1.6.4"
+        },
+        "tool-esptool32": {
+            "type": "uploader",
+            "version": "~1.0.0"
+        },
+        "tool-espotapy": {
+            "type": "uploader",
+            "optional": true,
+            "version": "~1.0.0"
+        }
+    }
+}
