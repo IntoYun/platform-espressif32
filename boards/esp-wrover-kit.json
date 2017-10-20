@@ -1,13 +1,19 @@
 {
   "build": {
     "core": "esp32",
-    "extra_flags": "-DESP32_DEV -DARDUINO_NodeMCU-32S",
+    "extra_flags": "-DESP32_DEV -DARDUINO_ESP32_DEV",
     "f_cpu": "240000000L",
-    "f_flash": "80000000L",
+    "hwids": [
+      [
+        "0x0403",
+        "0x6010"
+      ]
+    ],
+    "f_flash": "40000000L",
     "flash_mode": "dio",
     "ldscript": "esp32_out.ld",
     "mcu": "esp32",
-    "variant": "nodemcu-32s"
+    "variant": "esp32"
   },
   "connectivity": [
     "wifi",
@@ -15,11 +21,11 @@
     "ethernet",
     "can"
   ],
-  "frameworks":  [
+  "frameworks": [
     "arduino",
     "espidf"
   ],
-  "name": "NodeMCU-32S",
+  "name": "Espressif ESP-WROVER-KIT",
   "upload": {
     "flash_size": "4MB",
     "maximum_ram_size": 294912,
@@ -29,6 +35,6 @@
     "speed": 115200,
     "wait_for_upload_port": true
   },
-  "url": "http://www.nodemcu.com/",
-  "vendor": "NodeMCU"
+  "url": "https://espressif.com/en/products/hardware/esp-wrover-kit/overview",
+  "vendor": "Espressif"
 }

@@ -34,12 +34,13 @@ env.Replace(
     AS="xtensa-esp32-elf-as",
     CC="xtensa-esp32-elf-gcc",
     CXX="xtensa-esp32-elf-g++",
+    GDB="xtensa-esp32-elf-gdb",
     OBJCOPY=join(
-        platform.get_package_dir("tool-esptool32") or "", "esptool"),
+        platform.get_package_dir("tool-esptoolpy") or "", "esptool.py"),
     RANLIB="xtensa-esp32-elf-ranlib",
     SIZETOOL="xtensa-esp32-elf-size",
 
-    ARFLAGS=["rcs"],
+    ARFLAGS=["rc"],
 
     ASFLAGS=["-x", "assembler-with-cpp"],
 
@@ -85,7 +86,7 @@ env.Replace(
     #
 
     UPLOADER=join(
-        platform.get_package_dir("tool-esptool32") or "", "esptool"),
+        platform.get_package_dir("tool-esptoolpy") or "", "esptool.py"),
     UPLOADEROTA=join(platform.get_package_dir("tool-espotapy") or "",
                      "espota.py"),
 
@@ -108,7 +109,7 @@ env.Replace(
         "$UPLOAD_FLAGS"
     ],
 
-    UPLOADCMD='"$UPLOADER" $UPLOADERFLAGS $SOURCE',
+    UPLOADCMD='"$PYTHONEXE" "$UPLOADER" $UPLOADERFLAGS $SOURCE',
     UPLOADOTACMD='"$PYTHONEXE" "$UPLOADEROTA" $UPLOADEROTAFLAGS -f $SOURCE',
 
     SIZEPRINTCMD='$SIZETOOL -B -d $SOURCES',
@@ -131,7 +132,7 @@ env.Append(
     BUILDERS=dict(
         ElfToBin=Builder(
             action=env.VerboseAction(" ".join([
-                '"$OBJCOPY"',
+                '"$PYTHONEXE" "$OBJCOPY"',
                 "--chip", "esp32",
                 "elf2image",
                 "--flash_mode", "$BOARD_FLASH_MODE",

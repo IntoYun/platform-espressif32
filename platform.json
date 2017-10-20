@@ -12,7 +12,7 @@
         "type": "git",
         "url": "https://github.com/platformio/platform-espressif32.git"
     },
-    "version": "1.0.5",
+    "version": "1.0.6",
     "packageRepositories": [
         "http://dl.intoyun.com/intoyuniot/packages/manifest.json"
     ],
@@ -46,12 +46,12 @@
         "framework-arduinoespressif32": {
             "type": "framework",
             "optional": true,
-            "version": "~1.1.4"
+            "version": "~1.2.0"
         },
         "framework-espidf": {
             "type": "framework",
             "optional": true,
-            "version": "~2.200.0"
+            "version": "~2.210.0"
         },
         "framework-simba": {
             "type": "framework",
@@ -66,11 +66,11 @@
         "framework-intorobotespressif32": {
             "type": "framework",
             "optional": true,
-            "version": "~1.6.4"
+            "version": "~1.6.5"
         },
-        "tool-esptool32": {
+        "tool-esptoolpy": {
             "type": "uploader",
-            "version": "~1.0.0"
+            "version": "~1.20000.0"
         },
         "tool-espotapy": {
             "type": "uploader",
@@ -79,3 +79,4 @@
         }
     }
 }
+
