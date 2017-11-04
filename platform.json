@@ -10,7 +10,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/platformio/platform-espressif32.git"
+        "url": "https://github.com/intoyun/platform-espressif32.git"
     },
     "version": "1.0.6",
     "packageRepositories": [
