@@ -12,7 +12,7 @@
         "type": "git",
         "url": "https://github.com/intoyun/platform-espressif32.git"
     },
-    "version": "1.0.7",
+    "version": "1.0.8",
     "packageRepositories": [
         "http://dl.intoyun.com/intoyuniot/packages/manifest.json"
     ],
@@ -66,7 +66,7 @@
         "framework-intorobotespressif32": {
             "type": "framework",
             "optional": true,
-            "version": "~1.6.5"
+            "version": "~1.6.6"
         },
         "tool-esptoolpy": {
             "type": "uploader",
